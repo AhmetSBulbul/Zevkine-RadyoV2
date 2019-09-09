@@ -1,0 +1,51 @@
+﻿<Window x:Class="ZevkineRadyoV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZevkineRadyoV2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Normal" AllowsTransparency="True" WindowStyle="None" Background="Transparent" Loaded="Window_Loaded">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="751*"/>
+			<ColumnDefinition Width="41*"/>
+			<ColumnDefinition Width="0*"/>
+		</Grid.ColumnDefinitions>
+		<Image Margin="2,0,35,12" Source="radio_PNG19274.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Height="428" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="0.236"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+		<ComboBox x:Name="comboBoxName" HorizontalAlignment="Left" Height="23" Margin="223,309,0,0" VerticalAlignment="Top" Width="342"/>
+		<MediaElement Name="Player" LoadedBehavior="Manual" Height="10" VerticalAlignment="Top" Width="100"/>
+		<Button x:Name="exit" Style="{StaticResource CircleButton}" Margin="672,48,49,364" RenderTransformOrigin="0.211,0.579" Click="Exit_Click">
+			<Button.Background>
+				<ImageBrush ImageSource="Actions-dialog-close-icon.png" />
+			</Button.Background>
+		</Button>
+		<Button x:Name="Play" Width="75" Height="75" Style="{StaticResource CircleButton}" Margin="138,257,541,118" Click="Play_Click">
+			<Button.Background>
+				<ImageBrush ImageSource="play-button.png"/>
+			</Button.Background>
+		</Button>
+		<Button x:Name="PlayerStop" Width="35" Height="35" Style="{StaticResource CircleButton}" Margin="216,240,500,154" Click="PlayerStop_Click">
+			<Button.Background>
+				<ImageBrush ImageSource="stop.png"/>
+			</Button.Background>
+		</Button>
+		<Button x:Name="btnSettings" Width="34" Height="34" Style="{StaticResource CircleButton}" Margin="673,100,51,310" Click="BtnSettings_Click">
+			<Button.Background>
+				<ImageBrush ImageSource="settings.png"/>
+			</Button.Background>
+		</Button>
+
+
+
+	</Grid>
+</Window>
